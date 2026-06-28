@@ -1,0 +1,35 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Backend virtual environment
+backend/venv/
+
+# Tesseract installation
+backend/tesseract_ocr/
+
+# React
+my-app/node_modules/
+
+# Environment files
+.env
+
+# Uploaded images
+backend/uploaded_*
+
+# Large dataset
+backend/PESURF_new_medicine_dataset_revised.csv
+
+backend/*.mp4
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
