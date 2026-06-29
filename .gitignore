@@ -25,6 +25,13 @@ backend/PESURF_new_medicine_dataset_revised.csv
 
 backend/*.mp4
 
+backend/app2.py
+backend/app4.py
+backend/notebook.ipynb
+backend/ocr_aug27.ipynb
+backend/video30.ipynb
+backend/bracket_groups/
+
 # Notebook checkpoints
 .ipynb_checkpoints/
 
