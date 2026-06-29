@@ -15,6 +15,7 @@ my-app/node_modules/
 
 # Environment files
 .env
+backend/.env
 
 # Uploaded images
 backend/uploaded_*

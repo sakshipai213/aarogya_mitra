@@ -5,7 +5,8 @@
 
 
 # In[ ]:
-
+from dotenv import load_dotenv
+load_dotenv()
 
 from flask import Flask, request, jsonify, send_file
 from flask_cors import CORS
@@ -62,10 +63,10 @@ df.fillna("", inplace=True)
 # In[ ]:
 
 
-VISION_API_KEY = "your_api_key"  # 🔒 Replace this with your actual Vision API key
+VISION_API_KEY = os.getenv("VISION_API_KEY")
 VISION_URL = f"https://vision.googleapis.com/v1/images:annotate?key={VISION_API_KEY}"
 
-GROQ_API_KEY = "your_groq_api_key"  # 🔒 Replace this with your actual Groq API key
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")  # 🔒 Replace this with your actual Groq API key
 groq_client = Groq(api_key=GROQ_API_KEY)
 
 route_map = {
@@ -476,13 +477,7 @@ def find_substitute():
 # In[ ]:
 
 
-#api_key = "your_api_key_here"  # 🔒 Replace this with your actual OpenAI API key
-os.environ["OPENAI_API_KEY"] = api_key
-
-client = OpenAI(
-    base_url="https://api.studio.nebius.com/v1/",
-    api_key=os.environ["OPENAI_API_KEY"]
-)
+# Nebius removed — using Groq instead (already initialized above as groq_client)
 
 
 model_name = "facebook/nllb-200-1.3B"
@@ -557,18 +552,20 @@ def generate():
     "Output: Use Oral B Pro electric brush to gently brush your teeth.\n"
 
     f"Input: {structured_input}\nOutput:"
-)
+    )
 
 
-    response = client.chat.completions.create(
-        model="meta-llama/Meta-Llama-3.1-405B-Instruct",
-        messages=[{"role": "user", "content": prompt}],
-        max_tokens=256,
-        temperature=0.6,
-        top_p=0.9
+    response = groq_client.chat.completions.create(
+    model="llama-3.3-70b-versatile",
+    messages=[{"role": "user", "content": prompt}],
+    max_tokens=256,
+    temperature=0.6,
+    top_p=0.9
     )
 
     english_instruction = response.choices[0].message.content.strip()
+
+    #english_instruction = response.choices[0].message.content.strip()
 
     # Step 2: Translate to Indian Language (NLLB)
     lang_code_map = {
