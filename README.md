@@ -1,6 +1,6 @@
 # Aarogya Mitra 
 
-**Aarogya Mitra** (Hindi for "health friend") turns a photo of a prescription into instructions patients can actually understand — in their own language, spoken aloud, or shown as a short instructional video. It's built for low-literacy and non-English-speaking patients in India, with a companion tool for pharmacists to verify, edit, and find substitute medicines.
+**Aarogya Mitra** turns a photo of a handwritten prescription into instructions patients can actually understand  in their own language, spoken aloud, or shown as a short instructional video. It's built for low-literacy and non-English-speaking patients in India, with a companion tool for pharmacists to verify, edit, and find substitute medicines.
 
 ---
 
