@@ -18,6 +18,10 @@
 
 ---
 
+## Architecture
+<img width="1238" height="698" alt="image" src="https://github.com/user-attachments/assets/f0f55417-8c69-4913-b42f-6cf9321067f1" />
+
+
 ## Features
 
 - **Prescription OCR** — reads handwritten or printed prescriptions via Google Vision's document text detection.
@@ -138,4 +142,17 @@ The app will run at `http://localhost:3000` and expects the backend to be runnin
 | POST   | `/generate-text`     | Convert structured medicine input → simplified + translated text   |
 | POST   | `/generate-video`    | Upload a prescription image → returns a narrated instructional video |
 | POST   | `/find_substitute`   | Look up substitute medicines for a given medicine name             |
+---
+
+## My Contributions
+
+- Built the prescription data pipeline by collecting handwritten prescriptions from public datasets and local pharmacies.
+- Curated and annotated prescription data for OCR and information extraction tasks.
+- Evaluated multiple OCR engines through comparative experiments to identify the best-performing solution for handwritten prescriptions.
+- Developed preprocessing and post-processing pipelines to clean noisy OCR outputs.
+- Researched and experimented with multiple NER techniques and LLM-based approaches for extracting structured prescription information.
+- Implemented fuzzy string matching to accurately map extracted medicine names to standardized medicine datasets.
+- Designed a pipeline to transform raw OCR output into structured JSON, enabling downstream translation, text-to-speech, and pharmacist verification modules.
+  
+
 
