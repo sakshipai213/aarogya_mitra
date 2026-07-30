@@ -1,8 +1,11 @@
 # Aarogya Mitra 
 
+
 **Aarogya Mitra** turns a photo of a handwritten prescription into instructions patients can actually understand  in their own language, spoken aloud, or shown as a short instructional video. It's built for low-literacy and non-English-speaking patients in India, with a companion tool for pharmacists to verify, edit, and find substitute medicines.
 
 ---
+## Team Project
+ This repository is maintained on my GitHub as a portfolio copy of a collaborative project developed by a two-member team.
 
 ## How It Works
 
